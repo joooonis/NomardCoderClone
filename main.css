@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Hind', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: dimgray;
+  border-bottom: 1px solid lightgray;
+  padding: 5px 0px;
+}
+
+.login__left {
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  display: none;
+}
+
+.logo {
+  padding: 0px 12px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding: 0px 12px;
+}
+
+.login__right {
+  display: flex;
+  align-items: center;
+}
+
+.login__right li {
+  padding: 6px 18px;
+}
+
+.login__right .login__btn {
+  color: white;
+
+  border: 1px coral solid;
+  border-radius: 10px;
+  background-color: coral;
+}
+
+.login__right .login__btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.menu__drop__down {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid lightgray;
+  padding: 5px 30px;
+}
+
+.menu__drop__down li {
+  color: dimgray;
+  padding: 10px 0px;
+}
+
+.bar:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 800px) {
+  .navbar {
+    justify-content: space-around;
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+  }
+
+  .signup__btb {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+}
