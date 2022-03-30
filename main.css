@@ -9,14 +9,30 @@ a {
 }
 
 ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.flex__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
@@ -26,6 +42,11 @@ li {
   color: dimgray;
   border-bottom: 1px solid lightgray;
   padding: 5px 0px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav__left {
@@ -91,6 +112,11 @@ li {
   opacity: 0.8;
 }
 
+.inactive__btn {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 1280px) {
   .navbar {
     justify-content: space-between;
@@ -115,4 +141,60 @@ li {
     justify-content: space-between;
     padding: 5px 15px;
   }
+}
+
+.sign__up {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 120px 150px;
+}
+
+.formbox {
+  padding: 45px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 1.5px dimgray;
+}
+
+.sign__up h2 {
+  text-align: center;
+  font-size: 250%;
+  margin-bottom: 50px;
+  color: dimgray;
+}
+
+.sign__up .input__text {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.sign__up input {
+  transition: outline 0.1s;
+}
+
+.sign__up input:focus {
+  border: none;
+  outline: 3px solid coral;
+}
+
+.fav__language__p {
+  text-align: center;
+  font-size: large;
+  padding: 10px;
+}
+
+.radio__inputs {
+  display: flex;
+  flex-wrap: no wrap;
+  align-self: center;
+}
+
+.radio__inputs div {
+  padding: 0px 10px;
+}
+
+.checkbox__inputs {
+  padding-top: 10px;
 }
