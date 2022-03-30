@@ -28,7 +28,7 @@ li {
   padding: 5px 0px;
 }
 
-.login__left {
+.nav__left {
   display: flex;
   align-items: center;
 }
@@ -49,16 +49,16 @@ li {
   padding: 0px 12px;
 }
 
-.login__right {
+.nav__right {
   display: flex;
   align-items: center;
 }
 
-.login__right li {
+.nav__right li {
   padding: 6px 18px;
 }
 
-.login__right .login__btn {
+.nav__right .active__btn {
   color: white;
 
   border: 1px coral solid;
@@ -66,7 +66,7 @@ li {
   background-color: coral;
 }
 
-.login__right .login__btn:hover {
+.nav__right .active__btn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -107,7 +107,7 @@ li {
     display: block;
   }
 
-  .signup__btb {
+  .inactive__btn {
     display: none;
   }
 
