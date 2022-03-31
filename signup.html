@@ -55,14 +55,33 @@
               required
             />
 
-            <label for="password">Password</label>
+            <label for="password1">Password</label>
+            <!-- 영문 대소문자, 숫자, 특수문자를 꼭 포함하여 8~16자 -->
             <input
               class="input__text"
-              id="password"
-              name="password"
-              type="text"
+              id="password1"
+              name="password1"
+              type="password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
               required
+              onchange="test()"
             />
+            <p class="valid__alert" id="valid__alert__password1">
+              비밀번호는 영문 대소문자, 숫자, 특수문자를 한개 이상씩 포함하여 8~16자 이어야 합니다<div class=""></div>
+            </p>
+            <label for="password2">Confirm Password</label>
+            <input
+              class="input__text"
+              id="password2"
+              name="password2"
+              type="password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
+              required
+              onchange="test()"
+            />
+            <p class="valid__alert" id="valid__alert__password2">
+              비밀번호가 일치하지 않습니다.
+            </p>
             <label for="email">Email</label>
             <input
               class="input__text"
@@ -70,6 +89,7 @@
               name="email"
               type="text"
               placeholder="example@google.com"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <p class="fav__language__p">
               Choose your favorite Programming language
@@ -122,10 +142,36 @@
                 >
               </div>
             </div>
-            <button>Create Account</button>
+            <input type="submit" value="Create Account" />
+            <input type="reset" value="Reset" />
           </form>
         </div>
       </div>
     </div>
   </body>
+  <script>
+    const test = () => {
+      // 비밀번호 유효성 검사
+      let pw1 = document.getElementById('password1').value;
+      let isValidPassword =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1)
+      let alertPassword1 = document.getElementById('valid__alert__password1');
+
+      if (!isValidPassword) {
+        alertPassword1.style.display = 'block';
+      } else { 
+        alertPassword1.style.display = 'none'; 
+      }
+
+      // 비밀번호 동일성 검사 
+      let pw2 = document.getElementById('password2').value;
+      let alertPassword2 = document.getElementById('valid__alert__password2');
+      if (pw1 !== pw2) {
+        alertPassword2.style.display = 'block';
+      } else { 
+        alertPassword2.style.display = 'none'; 
+      }
+    };
+  </script>
+
 </html>
+

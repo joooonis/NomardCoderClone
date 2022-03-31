@@ -198,3 +198,10 @@ p {
 .checkbox__inputs {
   padding-top: 10px;
 }
+
+.valid__alert {
+  align-self: flex-start;
+  color: red;
+  font-size: 0.3em;
+  display: none;
+}
