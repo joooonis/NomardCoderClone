@@ -1,21 +1,44 @@
-body {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+b,
+a,
+i,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+caption,
+canvas,
+footer,
+header,
+nav,
+input,
+section,
+textarea,
+button,
+summary {
   margin: 0;
-  font-family: 'Hind', sans-serif;
-}
-
-a {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  outline: none;
   text-decoration: none;
-  color: white;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: 0;
-  margin: 0;
+  font-family: 'Hind', sans-serif;
   list-style: none;
 }
 
@@ -24,17 +47,14 @@ form {
   flex-direction: column;
 }
 
-p {
-  padding: 0;
-  margin: 0;
-}
-
-.flex__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: relative;
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .navbar {
@@ -43,14 +63,35 @@ p {
   align-items: center;
   color: dimgray;
   border-bottom: 1px solid lightgray;
-  padding: 5px 0px;
+  padding: 10px 15px;
+}
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+}
 
-  z-index: 999;
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 50px;
 }
 
 .nav__left {
@@ -83,15 +124,23 @@ p {
   padding: 6px 18px;
 }
 
-.nav__right .active__btn {
+.active__btn,
+.inactive__btn {
   color: white;
 
   border: 1px coral solid;
   border-radius: 10px;
   background-color: coral;
+
+  margin-right: 5px;
 }
 
-.nav__right .active__btn:hover {
+.active__btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.inactive__btn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -116,15 +165,9 @@ p {
   opacity: 0.8;
 }
 
-.inactive__btn {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
 @media screen and (max-width: 1280px) {
   .navbar {
     justify-content: space-between;
-    padding: 5px 15px;
   }
 }
 
@@ -137,24 +180,21 @@ p {
     display: block;
   }
 
-  .inactive__btn {
+  .active__btn {
     display: none;
   }
 
   .navbar {
     justify-content: space-between;
-    padding: 5px 15px;
   }
 }
 
 .sign__up {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  width: 500px;
-  padding: 120px 150px;
-
-  position: relative;
-  z-index: 998;
+  padding: 3rem;
 }
 
 .formbox {
@@ -163,9 +203,20 @@ p {
   box-shadow: inset 0 0 1.5px dimgray;
 }
 
+.forget__email {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: underline;
+  color: gray;
+  padding-top: 0.8em;
+  cursor: pointer;
+}
+
 .sign__up h2 {
   text-align: center;
   font-size: 250%;
+  margin-top: 25px;
   margin-bottom: 50px;
   color: dimgray;
 }
@@ -173,7 +224,7 @@ p {
 .sign__up .input__text {
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid gainsboro;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
@@ -216,7 +267,7 @@ p {
 .input__btn {
   color: white;
   font-size: medium;
-  font-weight: bold;
+  font-weight: 300;
 
   border: 1px coral solid;
   border-radius: 12px;
@@ -239,4 +290,22 @@ p {
 
 .birthday__input input {
   width: 28%;
+}
+
+.link__to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  font-size: 18px;
+}
+
+.link__to a {
+  color: coral;
+  font-weight: 100;
+}
+
+.link__to a:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
