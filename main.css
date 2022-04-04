@@ -52,18 +52,19 @@ header {
   background-color: white;
   width: 100%;
   top: 0;
-  left: 0;
-  right: 0;
+
   z-index: 999;
+  border-bottom: 1px solid lightgray;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: dimgray;
-  border-bottom: 1px solid lightgray;
   padding: 10px 15px;
+  margin: auto;
+  max-width: 1020px;
 }
 
 .relative {
