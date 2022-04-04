@@ -61,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: dimgray;
+  color: rgb(55 65 81);
   padding: 10px 15px;
   margin: auto;
   max-width: 1020px;
@@ -129,9 +129,9 @@ header {
 .inactive__btn {
   color: white;
 
-  border: 1px coral solid;
+  border: 1px #2563eb solid;
   border-radius: 10px;
-  background-color: coral;
+  background-color: #2563eb;
 
   margin-right: 5px;
 }
@@ -157,7 +157,7 @@ header {
 }
 
 .menu__drop__down li {
-  color: dimgray;
+  color: rgb(55 65 81);
   padding: 10px 0px;
 }
 
@@ -206,7 +206,7 @@ header {
 .formbox {
   padding: 45px;
   border-radius: 10px;
-  box-shadow: inset 0 0 1.5px dimgray;
+  box-shadow: inset 0 0 1.5px rgb(55 65 81);
 }
 
 .forget__email {
@@ -224,7 +224,7 @@ header {
   font-size: 250%;
   margin-top: 25px;
   margin-bottom: 50px;
-  color: dimgray;
+  color: rgb(55 65 81);
 }
 
 .sign__up .input__text {
@@ -240,7 +240,7 @@ header {
 
 .sign__up input:focus {
   border: none;
-  outline: 3px solid coral;
+  outline: 3px solid #2563eb;
 }
 
 .fav__language__p {
@@ -275,9 +275,9 @@ header {
   font-size: medium;
   font-weight: 300;
 
-  border: 1px coral solid;
+  border: 1px #2563eb solid;
   border-radius: 12px;
-  background-color: coral;
+  background-color: #2563eb;
 
   padding: 10px;
   margin-top: 12px;
@@ -307,11 +307,83 @@ header {
 }
 
 .link__to a {
-  color: coral;
+  color: rgb(59 130 246/0.5);
   font-weight: 100;
 }
 
 .link__to a:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+/* main page */
+
+.index {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem;
+  align-items: center;
+  width: 1020px;
+}
+
+.index h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 1;
+  margin: 30px 0px;
+  color: rgb(55 65 81);
+
+  text-shadow: rgb(0 0 0 / 10%) 2px 2px 4px;
+}
+
+.index p {
+  font-size: 18px;
+  line-height: 1.75em;
+
+  text-align: center;
+  color: rgb(55 65 81);
+
+  margin: 0;
+}
+
+.background__skewY {
+  background-color: rgb(55 65 81);
+  transform: skewY(-5deg);
+  height: 400px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.background__skewY h2,
+h3 {
+  color: white;
+  transform: skewY(5deg);
+  text-align: center;
+}
+
+.background__skewY h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+.background__skewY h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.background__noskew {
+  position: relative;
+  top: -250px;
+
+  background-color: rgb(55 65 81);
+  height: 400px;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
