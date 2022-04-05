@@ -193,6 +193,10 @@ header {
     position: fixed;
     margin: auto;
   }
+
+  .course__wrapper {
+    flex-direction: row;
+  }
 }
 
 .sign__up {
@@ -332,16 +336,17 @@ header {
 .index h2 {
   text-align: center;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 1;
   margin: 30px 0px;
-  color: rgb(55 65 81);
+  color: rgb(31 41 55);
 
   text-shadow: rgb(0 0 0 / 10%) 2px 2px 4px;
 }
 
 .index p {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.75em;
 
   text-align: center;
@@ -353,26 +358,24 @@ header {
 .background__skewY {
   background-color: rgb(55 65 81);
   transform: skewY(-5deg);
-  height: 400px;
-  width: 100%;
+  height: 300px;
+  width: 1000%;
   margin-top: 50px;
 }
 
-.background__skewY h2,
+.background__noskew h2,
 h3 {
   color: white;
-  transform: skewY(5deg);
   text-align: center;
+  margin: 0;
 }
 
-.background__skewY h2 {
+.background__noskew h2 {
   font-size: 32px;
   font-weight: 300;
-  margin-top: 1em;
-  margin-bottom: 0.25em;
 }
 
-.background__skewY h3 {
+.background__noskew h3 {
   font-size: 18px;
   font-weight: 400;
 }
@@ -382,8 +385,18 @@ h3 {
   top: -250px;
 
   background-color: rgb(55 65 81);
-  height: 400px;
-  width: 100%;
+  width: 1000%;
   color: white;
   text-align: center;
+}
+
+.swiper {
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+}
+
+.course__wrapper {
+  display: flex;
+  flex-direction: column;
 }

@@ -12,7 +12,11 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
-    <title>LAB3</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+    <script src="test.js"></script>
+    <title>노마드 코더 Nomad Coder</title>
   </head>
   <body>
     <div class="root">
@@ -46,38 +50,35 @@
           실제 서비스를 따라 만들면서 코딩을 배우세요.
         </p>
 
-        <div class="background__skewY">
+        <div class="background__skewY"></div>
+        <div class="background__noskew">
           <h2>Featured Courses</h2>
           <h3>최신 업데이트된 신상 강의</h3>
+
+          <div class="course__wrapper">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
         </div>
-        <div class="background__noskew">가나다라마바사</div>
       </main>
     </div>
   </body>
-  <script>
-    const test = () => {
-      // 비밀번호 유효성 검사
-      let pw1 = document.getElaentById('password1').value;
-      let alertPassword1 = document.getElementById('valid__alert__password1');
-      let alertPassword2 = document.getElementById('valid__alert__password2');
-
-      if (pw1 == '') return;
-
-      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
-
-      if (!isValidPassword) {
-        alertPassword1.style.display = 'block';
-      } else {
-        alertPassword1.style.display = 'none';
-      }
-
-      // 비밀번호 동일성 검사
-      let pw2 = document.getElementById('password2').value;
-      if (pw1 !== pw2) {
-        alertPassword2.style.display = 'block';
-      } else {
-        alertPassword2.style.display = 'none';
-      }
-    };
-  </script>
 </html>
