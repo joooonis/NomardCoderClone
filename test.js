@@ -1,6 +1,6 @@
 const test = () => {
   // 비밀번호 유효성 검사
-  let pw1 = document.getElaentById('password1').value;
+  let pw1 = document.getElementById('password1').value;
   let alertPassword1 = document.getElementById('valid__alert__password1');
   let alertPassword2 = document.getElementById('valid__alert__password2');
 
@@ -22,3 +22,9 @@ const test = () => {
     alertPassword2.style.display = 'none';
   }
 };
+
+let testPassword1 = document.getElementById('password1');
+let testPassword2 = document.getElementById('password2');
+
+testPassword1.addEventListener('change', test);
+testPassword2.addEventListener('change', test);

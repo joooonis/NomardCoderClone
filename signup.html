@@ -20,7 +20,9 @@
         <nav class="navbar">
           <div class="bar"><i class="fa-solid fa-bars"></i></div>
           <div class="nav__left">
-            <div class="logo"><a href="index.html"><bdi class="fa-solid fa-cheese"></i></a></div>
+            <div class="logo">
+              <a href="index.html"><i class="fa-solid fa-cheese"></i></a>
+            </div>
             <ul class="menu">
               <li>Menu</li>
               <li>Menu</li>
@@ -29,7 +31,7 @@
           </div>
           <div class="nav__right">
             <li class="inactive__btn"><a href="login.html">Login</a></li>
-            <li class="active__btn">Sign up</a></li>
+            <li class="active__btn"><a>Sign up</a></li>
           </div>
         </nav>
         <ul class="menu__drop__down">
@@ -54,7 +56,6 @@
               type="password"
               pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
               required
-              onchange="test()"
             />
             <p class="valid__alert" id="valid__alert__password1">
               비밀번호는 영문 대소문자, 숫자, 특수문자를 한개 이상씩 포함하여 8~16자 이어야 합니다
@@ -67,7 +68,6 @@
               type="password"
               pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"
               required
-              onchange="test()"
             />
             <p class="valid__alert" id="valid__alert__password2">비밀번호가 일치하지 않습니다.</p>
             <label for="email">Email Address</label>
@@ -149,31 +149,6 @@
         <div class="link__to">Already have an account?&nbsp;<a href="login.html">Log in &rarr;</a></div>
       </main>
     </div>
+    <script type="module" src="test.js"></script>
   </body>
-  <script>
-    const test = () => {
-      // 비밀번호 유효성 검사
-      let pw1 = document.getElementById('password1').value;
-      let alertPassword1 = document.getElementById('valid__alert__password1');
-      let alertPassword2 = document.getElementById('valid__alert__password2');
-
-      if (pw1 == '') return;
-
-      let isValidPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$/.test(pw1);
-
-      if (!isValidPassword) {
-        alertPassword1.style.display = 'block';
-      } else {
-        alertPassword1.style.display = 'none';
-      }
-
-      // 비밀번호 동일성 검사
-      let pw2 = document.getElementById('password2').value;
-      if (pw1 !== pw2) {
-        alertPassword2.style.display = 'block';
-      } else {
-        alertPassword2.style.display = 'none';
-      }
-    };
-  </script>
 </html>
