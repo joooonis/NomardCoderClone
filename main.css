@@ -166,39 +166,6 @@ header {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 1280px) {
-  .navbar {
-    justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .menu {
-    display: none;
-  }
-
-  .bar {
-    display: block;
-  }
-
-  .active__btn {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: space-between;
-  }
-
-  .logo {
-    position: fixed;
-    margin: auto;
-  }
-
-  .course__wrapper {
-    flex-direction: row;
-  }
-}
-
 .sign__up {
   position: relative;
 
@@ -381,13 +348,29 @@ h3 {
 }
 
 .background__noskew {
-  position: relative;
-  top: -250px;
-
-  background-color: rgb(55 65 81);
-  width: 1000%;
   color: white;
-  text-align: center;
+  position: relative;
+  top: -220px;
+  width: 1000%;
+  background-color: rgb(55 65 81);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background__noskew img {
+  margin-bottom: 1em;
+  border-radius: 12px;
+}
+
+.featured__courses {
+  margin-bottom: 60px;
+}
+
+.featured__courses h2 {
+  margin-bottom: 15px;
 }
 
 .swiper {
@@ -396,7 +379,112 @@ h3 {
   margin: 10px;
 }
 
-.course__wrapper {
+.course__wrapper img {
+  align-self: center;
+  max-width: 1024px;
+  color: #2563eb;
+  display: block;
+}
+
+.course__info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  margin-top: 8px;
+}
+
+.course__info h2 {
+  font-size: 26px;
+}
+
+.course__icon {
+  margin: 5px 0;
+}
+
+.course__icon i {
+  font-size: 42px;
+  margin-right: 8px;
+}
+
+.course__brief {
+  background: white;
+  padding: 18px 0px;
+  margin: auto;
+
+  border-radius: 5px;
+  width: 90%;
+
+  position: relative;
+  top: -60px;
+}
+
+.course__brief h2 {
+  color: rgb(31 41 55);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.course__brief p {
+  color: rgb(31 41 55);
+  font-size: 12px;
+}
+
+.course {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.course__plus li i {
+  margin-right: 5px;
+  font-size: 7px;
+  position: relative;
+  top: -2px;
+}
+
+@media screen and (max-width: 1280px) {
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .course {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course__info {
+    position: relative;
+    top: -25px;
+
+    margin-left: 0;
+    margin-top: 0;
+
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+  }
+
+  .active__btn {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo {
+    position: fixed;
+    margin: auto;
+  }
 }

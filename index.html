@@ -12,10 +12,6 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/0cf5439b1f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="swiper.js"></script>
-    <script src="test.js"></script>
     <title>노마드 코더 Nomad Coder</title>
   </head>
   <body>
@@ -52,29 +48,31 @@
 
         <div class="background__skewY"></div>
         <div class="background__noskew">
-          <h2>Featured Courses</h2>
-          <h3>최신 업데이트된 신상 강의</h3>
-
-          <div class="course__wrapper">
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
+          <div class="featured__courses">
+            <h2>Featured Courses</h2>
+            <h3>최신 업데이트된 신상 강의</h3>
+          </div>
+          <div class="course">
+            <div class="course__block">
+              <img src="src/react-native-feature-banner.jpg" width="400px" alt="first-course" />
+              <div class="course__brief">
+                <h2>React Native 마스터클래스</h2>
+                <p>Navigation, React Query, Animated, Realm</p>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
+            </div>
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
+            <div class="course__info">
+              <h2>React Native 마스터클래스</h2>
+              <div class="course__icon">
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-node-js"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <ul class="course__plus">
+                <li><i class="fa-solid fa-circle-plus"></i> 106+개의 강의</li>
+                <li><i class="fa-solid fa-circle-plus"></i> 완강을 위한 2주 완성 챌린지 프로그램</li>
+                <li><i class="fa-solid fa-circle-plus"></i> 최신 버전으로 업데이트!</li>
+              </ul>
             </div>
           </div>
         </div>
