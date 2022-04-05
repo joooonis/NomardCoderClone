@@ -1,3 +1,10 @@
+// import Swiper JS
+import Swiper, { Navigation, Pagination } from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -19,3 +26,5 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
+swiper = document.querySelector('.swiper').swiper;
