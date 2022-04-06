@@ -6,10 +6,8 @@
   display: flex;
   flex-direction: column;
 
-  padding: 3rem;
   align-items: center;
-  max-width: 1024px;
-  min-width: 320px;
+
   width: 100%;
 }
 
@@ -35,12 +33,35 @@
   margin: 0;
 }
 
+.start__btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(55 65 81);
+
+  padding: 14px 22px;
+  border: 2px solid rgb(55 65 81);
+  border-radius: 8px;
+  margin: 20px 0;
+
+  transition: background-color 0.2s;
+}
+
+.start__btn:hover {
+  color: white;
+  background-color: rgb(55 65 81);
+
+  cursor: pointer;
+}
+
 .background__skewY {
   background-color: rgb(55 65 81);
-  transform: skewY(-5deg);
+  transform: skewY(-3deg);
   height: 300px;
-  width: 1000%;
+  width: 100%;
   margin-top: 50px;
+
+  position: relative;
+  top: 18px;
 }
 
 .background__noskew h2,
@@ -63,8 +84,8 @@ h3 {
 .background__noskew {
   color: white;
   position: relative;
-  top: -220px;
-  width: 1000%;
+  top: -200px;
+  width: 100%;
   background-color: rgb(55 65 81);
 
   display: flex;
@@ -134,7 +155,7 @@ h3 {
   justify-content: center;
   align-items: flex-start;
 
-  margin: 0px 18px;
+  margin: 0px 12px;
   width: 100%;
   max-width: 1024px;
 }
@@ -149,6 +170,8 @@ h3 {
 .course__info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   margin-left: 40px;
   margin-top: 8px;
 }
@@ -158,16 +181,21 @@ h3 {
 }
 
 .course__btn {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.course__btn a {
   color: white;
 
   border: 1px #2563eb solid;
   border-radius: 10px;
   background-color: rgb(59 130 246);
   padding: 6px 8px;
-  width: 100px;
   font-weight: 600;
 
-  margin: auto 20px 20px auto;
+  margin: 0 20px 0 auto;
 }
 
 .course__btn:hover {
@@ -187,12 +215,18 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
   }
 
   .course__info {
     align-self: center;
-    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 25px 25px;
+  }
+
+  .course__about {
+    margin-left: 10px;
   }
 }
 
